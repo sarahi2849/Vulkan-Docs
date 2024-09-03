@@ -90,7 +90,7 @@ jobs:
       # Generate the vulkan C++ header (vulkan.hpp)
       # Failure (should be) allowed, for now
       - name: Download generated spec
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spec-outputs
       - name: Unpack generated spec
@@ -151,7 +151,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cargo-ash-generator-
       - name: Download generated spec
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spec-outputs
       - name: Unpack generated spec
@@ -187,7 +187,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Download generated files
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spec-outputs
       - name: Unpack generated spec
@@ -207,13 +207,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Download generated spec
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: spec-outputs
       - name: Unpack generated spec
         run: tar -xvf spec-outputs.tar
       - name: Download generated hpp
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: hpp-outputs
           path: gen/include/
@@ -232,7 +232,7 @@ jobs:
 
     steps:
       - name: Download generated files
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ash-outputs
       - name: Unpack generated Ash crate
